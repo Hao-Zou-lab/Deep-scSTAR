@@ -1,0 +1,1 @@
+The 'outputs' directory is used to store output data. You can customize the name of this folder and specify your file path when running run_DscSTAR.py.
