@@ -70,7 +70,7 @@ Set Up Environment:
 To run Deep scSTAR, execute the following command in your terminal:
 
 ```shell
-  python run_scSTAR_K.py --input-file1 "case.csv" --input-file2 "ctr.csv" --output-name1 "case.out.csv" --output-name2 "ctr.out.csv" --data-folder "inputs/" --output-folder "outputs/"
+  python run_DscSTAR.py --input-file1 "case.csv" --input-file2 "ctr.csv" --output-name1 "case.out.csv" --output-name2 "ctr.out.csv" --data-folder "inputs/" --output-folder "outputs/"
 ```
 
 The demo takes around 5 minutes to run (GPU: A100).
