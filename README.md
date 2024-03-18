@@ -39,7 +39,7 @@ If you do not have Miniconda3, install it following the official guidelines. Aft
   conda create -n DscSTAR python=3.10
 ```
 
-Activate your environment, then retrieve the Deep scSTAR package from GitHub. If network issues prevent the use of `git clone`, you can download the  [DscSTAR.zip](https://github.com/Hao-Zou-lab/Deep-scSTAR/archive/refs/heads/main.zip) file directly and extract it on your PC. You can directly click on the [case](https://drive.google.com/file/d/1-XWWTZzxaw5GsIPUk4wPUshYg29QC-bk/view?usp=drive_link) and [ctr](https://drive.google.com/file/d/1N5qTWe-LIMmIiiobjKbtmm4Ju4ug0WYf/view?usp=drive_link) links to download the demo data, or use `gdown` to download the data:
+Activate your environment, then retrieve the Deep scSTAR package from GitHub. If network issues prevent the use of `git clone`, you can download the  [DscSTAR.zip](https://github.com/Hao-Zou-lab/Deep-scSTAR/archive/refs/heads/main.zip) file directly and extract it to your local path. You can directly click on the [case](https://drive.google.com/file/d/1-XWWTZzxaw5GsIPUk4wPUshYg29QC-bk/view?usp=drive_link) and [ctr](https://drive.google.com/file/d/1N5qTWe-LIMmIiiobjKbtmm4Ju4ug0WYf/view?usp=drive_link) links to download the demo data, or use `gdown` to download the data:
 
 ```shell
   codeconda activate DscSTAR
