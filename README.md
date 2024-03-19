@@ -4,7 +4,7 @@ Deep Learning of single-cell State Transition Across-samples of RNA-seq data (**
 ![Image text](https://github.com/Hao-Zou-lab/Deep-scSTAR/blob/main/figure.png)
 ## **Dependency**
 
-```
+```shell
     python >= 3.10.0
     pytorch >= 2.2.1
     scikit-learn >= 1.2.2
@@ -122,6 +122,17 @@ The demo takes around 6 minutes to run (GPU: RTX 4090).
 
 
 
+### Outputs
+
+After running `run_DscSTAR.py`, you will obtain five output files in the `outputs/` directory, which include:
+
+1. `case.out.csv` and `ctr.out.csv`: These files contain the reconstructed data.
+2. `UMAP.png`: This image presents a UMAP plot of the reconstructed data.
+3. `loss.png`: This graph displays the average total loss function versus the number of training epoch.
+4. `trained_model.pth`: This is the trained model file, which stores the learned weights and biases of the neural network after training.
+
+
+
 
 ## **Analyze Your Own Data**
 
@@ -177,4 +188,17 @@ The following parameters can be adjusted within `run_DscSTAR.py`:
 `num_epochs` - The number of iterations for training the model. You can choose between 200-400. A higher number may lead to overfitting of the model.
 
 `gamma` - If the results appear distorted, you can appropriately increase the gamma value. A higher gamma value can constrain the model to retain more of the original information.
+
+
+
+## Applying pre-trained model
+
+You can apply your model that has already been trained on a  new dataset by running apply_pretrained.py:
+
+```shell
+  python apply_pretrained.py --input-file1 "case.csv" --input-file2 "ctr.csv" \
+            --output-name1 "case.applyed.csv" --output-name2 "ctr.applyed.csv" \
+            --data-folder "./inputs/" \
+            --model-path "./outputs/trained_model.pth"
+```
 
