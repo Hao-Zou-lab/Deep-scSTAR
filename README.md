@@ -1,3 +1,4 @@
+![Image text](https://github.com/Hao-Zou-lab/Deep-scSTAR/blob/main/logo.png)
 # **Deep scSTAR documentation**
 
 Deep Learning of single-cell State Transition Across-samples of RNA-seq data (**Deep scSTAR**) ,  is a deep learning model designed for mapping high-dimensional single-cell RNA-seq data into a lower-dimensional feature space, enabling the distinction of cell phenotypes and extraction of dynamic, phenotype-associated features while preserving the integrity of original biological signals.
