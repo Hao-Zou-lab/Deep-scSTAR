@@ -29,7 +29,7 @@ if __name__ == '__main__':
     else:
       model = torch.load(args.model_path, map_location=torch.device('cpu'))
 
-    plotpath = args.output_folder + "UMAPplot.png"
+    plotpath = args.output_folder + "UMAP.png"
     data_folder = args.data_folder
     dataset_file_list = [args.input_file1, args.input_file2]
     dataset_file_list = [data_folder + f for f in dataset_file_list]
