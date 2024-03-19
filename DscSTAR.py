@@ -26,9 +26,13 @@ imblearn_seed = 0
 
 code_size = 512  
 
-def add_noise(x, noise_factor=0.5):
-    noise = noise_factor * torch.randn_like(x)
-    x_noisy = x + noise
+#def add_noise(x, noise_factor=0.5):
+   # noise = noise_factor * torch.randn_like(x)
+  #  x_noisy = x + noise
+ #   return x_noisy
+def add_noise(x, p=0.5):
+    noise = torch.bernoulli(torch.full_like(x, 1-p))
+    x_noisy = x * noise
     return x_noisy
 
 class Classifier(nn.Module):
