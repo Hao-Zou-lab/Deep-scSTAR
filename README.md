@@ -129,7 +129,7 @@ If you wish to use your own input data, we provide a method to do so after readi
 
 ```R
 HSP_expression <- FetchData(SeuratObj, vars = "HSP90AA1")
-cxcl13_info <- ifelse(cxcl13_expression > 0, "HSP+", "HSP-")
+HSP_info <- ifelse(HSP_expression > 0, "HSP+", "HSP-")
 SeuratObj[["HSPinfo"]] <- HSP_info
 
 Ctr_filtered <- subset(seurat_filtered, subset = HSPinfo == 'HSP-')
