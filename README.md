@@ -157,7 +157,7 @@ write.csv(Ctr_filtered, file="ctr.csv", row.names=TRUE)
 write.csv(Case_filtered, file="case.csv", row.names=TRUE)
 ```
 
-In this example, `SeuratObj` is a Seurat object containing normalized gene expression data. Let's define cells expressing the gene `HSP90AA1` as the case group, and those not expressing it as the control group. Then format the column names in a sequential manner and output the data to CSV files.
+In this example, `SeuratObj` is a Seurat object containing normalized gene expression data. Let's define cells expressing the gene `HSP90AA1` as the case group, and those not expressing it as the control group. Then format the column names in a sequential manner and output the data to CSV files. The `case.csv` and `ctr.csv` files are structured to meet the input requirements of Deep scSTAR, with gene names as row headers and columns labeled with sequential numbers from `1` to `m` (where `m` is the total number of cells across both files). Columns in `ctr.csv` are numbered from `1` to `n`, and in `case.csv`, from `n+1` to `m` (with `n` being the number of columns in `ctr.csv` and `m` the total column count in both files, noting that `ctr` and `case` labels could be interchanged but the column naming from `1` to `m` is essential), ensuring each cell has a unique identifier across both files. This arrangement includes a top header row showing these numeric column identifiers and gene names in the leftmost column, aligning with Deep scSTAR's specifications for gene expression data analysis.
 
 The output `case.csv` and `ctr.csv` can be used as inputs for Deep scSTAR. Afterwards, you can read the processed data and merge it with the metadata of the original Seurat object for downstream analysis.
 
