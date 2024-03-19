@@ -15,19 +15,19 @@ pre_process_paras = {'prep': prep}
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Run scSTAR_K_model')
-    parser.add_argument('--data-folder', default='/content/drive/MyDrive/DscSTAR/inputs/', help='Path to the data folder')
-    parser.add_argument('--input-file1', default='Case_corrected.csv', help='First input csv file name')
-    parser.add_argument('--input-file2', default='Ctr_corrected.csv', help='Second input csv file name')
-    parser.add_argument('--output-folder', default='/content/drive/MyDrive/DscSTAR/outputs/runmodel/', help='Path to the output folder')
-    parser.add_argument('--output-name1', default='Case_DscSTAR.csv', help='First output csv file name')
-    parser.add_argument('--output-name2', default='Ctr_DscSTAR.csv', help='Second output csv file name')
-    parser.add_argument('--model-path', default='/content/drive/MyDrive/DscSTAR/outputs/trained_model.pth', help='Path to the trained model')
+    parser.add_argument('--data-folder', default='./inputs/', help='Path to the data folder')
+    parser.add_argument('--input-file1', default='case.csv', help='First input csv file name')
+    parser.add_argument('--input-file2', default='ctr.csv', help='Second input csv file name')
+    parser.add_argument('--output-folder', default='./outputs/applyed_model/', help='Path to the output folder')
+    parser.add_argument('--output-name1', default='case.out.csv', help='First output csv file name')
+    parser.add_argument('--output-name2', default='ctr.out.csv', help='Second output csv file name')
+    parser.add_argument('--model-path', default='./outputs/trained_model.pth', help='Path to the trained model')
     args = parser.parse_args()
 
     if torch.cuda.is_available():
-      model = torch.load('model_complete.pth')
+      model = torch.load(args.model_path)
     else:
-      model = torch.load('model_complete.pth', map_location=torch.device('cpu'))
+      model = torch.load(args.model_path, map_location=torch.device('cpu'))
 
     plotpath = args.output_folder + "UMAPplot.png"
     data_folder = args.data_folder
