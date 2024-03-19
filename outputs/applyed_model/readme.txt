@@ -1,0 +1,1 @@
+The 'outputs' directory is used to store output data using pre-trained model. You can customize the name of this folder and specify your file path when running apply_pretrained.py.
