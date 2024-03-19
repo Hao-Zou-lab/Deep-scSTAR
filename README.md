@@ -157,7 +157,7 @@ write.csv(Ctr_filtered, file="ctr.csv", row.names=TRUE)
 write.csv(Case_filtered, file="case.csv", row.names=TRUE)
 ```
 
-In this example, `SeuratObj` is a Seurat object containing normalized gene expression data. We define cells expressing the gene `HSP90AA1` as the case group, and those not expressing it as the control group. We then format the column names in a sequential manner and output the data to CSV files.
+In this example, `SeuratObj` is a Seurat object containing normalized gene expression data. Let's define cells expressing the gene `HSP90AA1` as the case group, and those not expressing it as the control group. Then format the column names in a sequential manner and output the data to CSV files.
 
 The output `case.csv` and `ctr.csv` can be used as inputs for Deep scSTAR. Afterwards, you can read the processed data and merge it with the metadata of the original Seurat object for downstream analysis.
 
