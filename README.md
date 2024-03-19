@@ -128,7 +128,7 @@ After running `run_DscSTAR.py`, you will obtain five output files in the `output
 
 1. `case.out.csv` and `ctr.out.csv`: These files contain the reconstructed data.
 2. `UMAP.png`: This image presents a UMAP plot of the reconstructed data.
-3. `Loss.png`: This graph displays the average total loss function versus the number of training epoch.
+3. `Loss.png`: This graph displays the average total loss versus the number of training epoch.
 4. `trained_model.pth`: This is the trained model file, which stores the learned weights and biases of the neural network after training.
 
 
