@@ -203,7 +203,7 @@ You can apply your model that has already been trained on a  new dataset by runn
 ```
 After running `apply_pretrained.py`, you will obtain three output files in the `outputs/applyed_model/` directory, which include:
 
-1. `case.out.csv` and `ctr.out.csv`: These files contain the reconstructed data.
+1. `case.applyed.csv` and `ctr.applyed.csv`: These files contain the reconstructed data.
 2. `UMAP.png`: This image presents a UMAP plot of the reconstructed data.
 
 
