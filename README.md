@@ -128,7 +128,7 @@ After running `run_DscSTAR.py`, you will obtain five output files in the `output
 
 1. `case.out.csv` and `ctr.out.csv`: These files contain the reconstructed data.
 2. `UMAP.png`: This image presents a UMAP plot of the reconstructed data.
-3. `loss.png`: This graph displays the average total loss function versus the number of training epoch.
+3. `Loss.png`: This graph displays the average total loss function versus the number of training epoch.
 4. `trained_model.pth`: This is the trained model file, which stores the learned weights and biases of the neural network after training.
 
 
@@ -201,4 +201,9 @@ You can apply your model that has already been trained on a  new dataset by runn
             --data-folder "./inputs/" \
             --model-path "./outputs/trained_model.pth"
 ```
+After running `apply_pretrained.py`, you will obtain three output files in the `outputs/applyed_model/` directory, which include:
+
+1. `case.out.csv` and `ctr.out.csv`: These files contain the reconstructed data.
+2. `UMAP.png`: This image presents a UMAP plot of the reconstructed data.
+
 
