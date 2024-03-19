@@ -66,8 +66,8 @@ if __name__ == '__main__':
 
     dataset, muX = pre_processing(dataset_file_list, pre_process_paras)
     nn_paras['num_inputs'] = len(dataset['gene_sym'])
-    plotpath = args.output_folder + "UMAPplot.png"
-    plotpath2 = args.output_folder + "LOSSplot.png" 
+    plotpath = args.output_folder + "UMAP.png"
+    plotpath2 = args.output_folder + "LOSS.png" 
 
     # training
     model, classifier, loss_total_list, loss_reconstruct_list, loss_transfer_list, loss_ortho_list = training(dataset, nn_paras, plotpath2)
