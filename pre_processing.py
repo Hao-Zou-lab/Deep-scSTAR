@@ -68,13 +68,14 @@ def read_csv(filename, batch_label):
     dataset = {}
     df = pd.read_csv(filename, header=None)
     dat = df[df.columns[1:]].values
-    dataset['sample_labels'] = dat[0, :].astype(int)
-    gene_sym = df[df.columns[0]].tolist()[1:]
-    gene_exp = dat[1:, :]
+    
+    dataset['sample_labels'] = df.columns[1:].tolist()
+    gene_sym = df[df.columns[0]].tolist()[1:] 
+    gene_exp = dat[1:, :].astype(float)  
     dataset['gene_exp'] = gene_exp
     dataset['gene_sym'] = gene_sym
     
-    dataset['batch_labels'] = [batch_label] * dat.shape[1]
+    dataset['batch_labels'] = [batch_label] * dat.shape[1] 
 
     return dataset
 
