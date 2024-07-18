@@ -71,7 +71,7 @@ def read_csv(filename, batch_label):
     
     dataset['sample_labels'] = df.columns[1:].tolist()
     gene_sym = df[df.columns[0]].tolist()[1:] 
-    gene_exp = dat[1:, :].astype(float)  
+    gene_exp = dat[1:, :].astype(float)  #2024.7.18
     dataset['gene_exp'] = gene_exp
     dataset['gene_sym'] = gene_sym
     
