@@ -29,8 +29,29 @@ We recommend three primary platforms for installing and running Deep scSTAR:
 
 ### Running on Google Colab
 
-Please check [Demo-Colab.ipynb](https://github.com/Hao-Zou-lab/Deep-scSTAR/blob/main/Demo_Colab.ipynb) for the usage of Deep scSTAR, the demo takes around 11 minutes to run on server (GPU: T4 GPU). It demonstrates how to read `adata` using `scanpy`, generate inputs for Deep scSTAR, and run the analysis. 
+Please check [Demo-Colab.ipynb](https://github.com/Hao-Zou-lab/Deep-scSTAR/blob/main/Demo_Colab.ipynb) for the usage of Deep scSTAR. The demo takes around 11 minutes to run on a server (GPU: T4 GPU). It demonstrates how to read `adata` using `scanpy`, generate inputs for Deep scSTAR, and run the analysis.
 
+### Reproducing the Results from the Paper
+
+For users interested in reproducing the results presented in our paper, we have provided two additional notebooks in the [experiments](https://github.com/Hao-Zou-lab/Deep-scSTAR/tree/main/experiments) directory:
+
+1. **LPC-Responsive Endothelial Cell Data**  
+   Notebook: [Code_to_Reproduce_Results_for_LPC_Responsive_Endothelial_Cell_Subpopulations.ipynb](https://github.com/Hao-Zou-lab/Deep-scSTAR/blob/main/experiments/Code_to_Reproduce_Results_for_LPC_Responsive_Endothelial_Cell_Subpopulations.ipynb)  
+   **Description:** This code is used to reproduce the results for the LPC-Responsive Endothelial Cell dataset.  
+   **Requirements:**  
+   - The notebook needs to be run on Google Colab with an A100 GPU for optimal performance.  
+   **Additional Resources:**  
+   - At the end of the notebook, you will find links to pretrained models and the main results.
+
+2. **B-cell Simulation Data**  
+   Notebook: [Code_to_Reproduce_Results_for_the_B_cell_Simulation_Data.ipynb](https://github.com/Hao-Zou-lab/Deep-scSTAR/blob/main/experiments/Code_to_Reproduce_Results_for_the_B_cell_Simulation_Data.ipynb)  
+   **Description:** This code is used to reproduce the results for the B-cell simulation dataset.  
+   **Requirements:**  
+   - The notebook needs to be run on Google Colab with an A100 GPU for optimal performance.  
+   **Additional Resources:**  
+   - At the end of the notebook, you will find links to pretrained models and the main results.
+
+Simply request a Google Colab server with the required A100 GPU, run these notebooks, and you will obtain results consistent with those reported in the paper.
 
 ### Running on Linux via Miniconda3 Terminal
 
